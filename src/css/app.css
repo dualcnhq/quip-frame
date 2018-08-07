@@ -1,4 +1,4 @@
-div {
+/* div {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -6,10 +6,20 @@ div {
 	right: 0;
 
 	margin: auto;
+} */
+
+.bottom-left {
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
-
 .blue-circle {
+	top: 10;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
   width: 60px;
   height: 60px;
   border-radius: 50%;
