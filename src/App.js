@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import Iframe from 'react-iframe';
+import ReactDOM from 'react-dom';
 import BlueCircle from './components/BlueCircle';
 
 
@@ -9,33 +10,41 @@ class App extends Component {
     super(props);
     this.state = {
       direction: '',
-      lastScrollPos: 0
+      lastScrollPos: 0,
+      whitelist: ["id", "tagName", "className", "childNodes"]
     };
     this.handleScroll = this.handleScroll.bind(this);
     this.iframe = this.iframe.bind(this);
+    this.getDOMElements = this.getDOMElements.bind(this);
   }
 
   handleScroll(event) {
-    if(this._timeout){ // if there is already a timeout in process cancel it
+    if(this._timeout) {
       clearTimeout(this._timeout);
     }
     this._timeout = setTimeout(() => {
       this._timeout = null;
-      this.setState({
-        scrollStatus:'scroll stopped'
-      });
       console.log('scroll stopped')
+      this.getDOMElements()
     }, 5000);
+
     if(this.state.scrollStatus !== 'scrolling') {
-      this.setState({ scrollStatus:'scrolling' });
       console.log('scrolling')
     }
   }
 
+  getDOMElements() {
+    const { whitelist } = this.state
+    const element = ReactDOM.findDOMNode(this);
+    console.log(element);
+
+  }
+
   iframe() {
+    const url = 'https://kubernetes.io';
     return {
-      __html: '<iframe src="https://kubernetes.io" frameborder="0" \
-                width="100%" height="900px" allowFullScreen></iframe>'
+      __html: `<iframe src=${url} frameborder="0" \
+                width="100%" height="900px" allowFullScreen></iframe>`
     }
   }
 
