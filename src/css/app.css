@@ -1,0 +1,22 @@
+div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin: auto;
+}
+
+
+.blue-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #0000FF;
+  line-height: 500px;
+  background: #0000FF;
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+}
