@@ -1,420 +1,463 @@
 <!DOCTYPE html>
 <!-- saved from url=(0022)https://kubernetes.io/ -->
-<html id="home" lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html id="home" lang="en" class="">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="generator" content="Hugo 0.46">
-		
-<script type="text/javascript" async="" src="./kubernetes-io_files/analytics.js"></script><script async="" src="./kubernetes-io_files/js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-36037335-10');
-</script>
+	<script type="text/javascript" async="" src="./kubernetes-io_files/analytics.js"></script>
+	<script async="" src="./kubernetes-io_files/js"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-<title>Production-Grade Container Orchestration - Kubernetes</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/png" href="https://kubernetes.io/images/favicon.png">
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
 
-<link rel="stylesheet" type="text/css" href="./kubernetes-io_files/base_fonts.css">
-<link rel="stylesheet" media="screen" href="./kubernetes-io_files/styles.min.d02f2440b9c46e9d70858ef9d01d95c96f4568fa648bbfa71dc44a5032967a62.css" integrity="sha256-0C8kQLnEbp1whY750B2VyW9FaPpki7+nHcRKUDKWemI=">
-<link rel="stylesheet" type="text/css" href="./kubernetes-io_files/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="./kubernetes-io_files/sweetalert.min.css">
-<link rel="stylesheet" type="text/css" href="./kubernetes-io_files/callouts.css">
-<link rel="stylesheet" type="text/css" href="./kubernetes-io_files/tags.css">
+		gtag('config', 'UA-36037335-10');
+	</script>
 
-<meta name="description" content="Production-Grade Container Orchestration">
-<meta property="og:description" content="Production-Grade Container Orchestration">
+	<title>Production-Grade Container Orchestration - Kubernetes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/png" href="https://kubernetes.io/images/favicon.png">
 
-<meta property="og:url" content="https://kubernetes.io/">
-<meta property="og:title" content="Production-Grade Container Orchestration - Kubernetes">
+	<link rel="stylesheet" type="text/css" href="./kubernetes-io_files/base_fonts.css">
+	<link rel="stylesheet" media="screen" href="./kubernetes-io_files/styles.min.d02f2440b9c46e9d70858ef9d01d95c96f4568fa648bbfa71dc44a5032967a62.css" integrity="sha256-0C8kQLnEbp1whY750B2VyW9FaPpki7+nHcRKUDKWemI=">
+	<link rel="stylesheet" type="text/css" href="./kubernetes-io_files/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="./kubernetes-io_files/sweetalert.min.css">
+	<link rel="stylesheet" type="text/css" href="./kubernetes-io_files/callouts.css">
+	<link rel="stylesheet" type="text/css" href="./kubernetes-io_files/tags.css">
+	<link rel="stylesheet" type="text/css" href="./kubernetes-io_files/app.css">
 
-<script src="./kubernetes-io_files/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="./kubernetes-io_files/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-<script src="./kubernetes-io_files/bootstrap.min.js"></script>
-<script src="./kubernetes-io_files/sweetalert.min.js"></script>
-<script src="./kubernetes-io_files/script.js"></script>
-<script src="./kubernetes-io_files/tags.js"></script>
+	<meta name="description" content="Production-Grade Container Orchestration">
+	<meta property="og:description" content="Production-Grade Container Orchestration">
 
-<script async="" defer="" src="./kubernetes-io_files/f.txt"></script>
+	<meta property="og:url" content="https://kubernetes.io/">
+	<meta property="og:title" content="Production-Grade Container Orchestration - Kubernetes">
 
-	<script charset="utf-8" type="text/javascript" src="./kubernetes-io_files/prompt_embed_static.js"></script><link rel="preload" href="./kubernetes-io_files/f(1).txt" as="script"><script type="text/javascript" src="./kubernetes-io_files/f(1).txt"></script><link rel="preload" href="./kubernetes-io_files/f(2).txt" as="script"><script type="text/javascript" src="./kubernetes-io_files/f(2).txt"></script></head>
-	<body>
-		<div id="cellophane" onclick="kub.toggleMenu()"></div>
+	<script src="./kubernetes-io_files/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="./kubernetes-io_files/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="./kubernetes-io_files/bootstrap.min.js"></script>
+	<script src="./kubernetes-io_files/sweetalert.min.js"></script>
+	<script src="./kubernetes-io_files/script.js"></script>
+	<script src="./kubernetes-io_files/tags.js"></script>
 
-<header>
-    <a href="https://kubernetes.io/" class="logo"></a>
+	<script async="" defer="" src="./kubernetes-io_files/f.txt"></script>
 
-    <div class="nav-buttons" data-auto-burger="primary">
-        <ul class="global-nav">
-            
-            
-            <li><a href="https://kubernetes.io/docs/home/">Documentation</a></li>
-            
-            <li><a href="https://kubernetes.io/blog/">Blog</a></li>
-            
-            <li><a href="https://kubernetes.io/partners/">Partners</a></li>
-            
-            <li><a href="https://kubernetes.io/community/">Community</a></li>
-            
-            <li><a href="https://kubernetes.io/case-studies/">Case Studies</a></li>
-            
-            
-             <li>
-                <a href="https://kubernetes.io/#">
+	<script charset="utf-8" type="text/javascript" src="./kubernetes-io_files/prompt_embed_static.js"></script>
+	<link rel="preload" href="./kubernetes-io_files/f(1).txt" as="script">
+	<script type="text/javascript" src="./kubernetes-io_files/f(1).txt"></script>
+	<link rel="preload" href="./kubernetes-io_files/f(2).txt" as="script">
+	<script type="text/javascript" src="./kubernetes-io_files/f(2).txt"></script>
+</head>
+
+<body>
+	<div id="cellophane" onclick="kub.toggleMenu()"></div>
+
+	<header>
+		<a href="https://kubernetes.io/" class="logo"></a>
+
+		<div class="nav-buttons" data-auto-burger="primary">
+			<ul class="global-nav">
+
+
+				<li><a href="https://kubernetes.io/docs/home/">Documentation</a></li>
+
+				<li><a href="https://kubernetes.io/blog/">Blog</a></li>
+
+				<li><a href="https://kubernetes.io/partners/">Partners</a></li>
+
+				<li><a href="https://kubernetes.io/community/">Community</a></li>
+
+				<li><a href="https://kubernetes.io/case-studies/">Case Studies</a></li>
+
+
+				<li>
+					<a href="https://kubernetes.io/#">
                     English <span class="ui-icon ui-icon-carat-1-s"></span>
                 </a>
-                <ul>
-                
-                    <li><a href="https://kubernetes.io/cn/">Chinese</a></li>
-                
-                </ul>
-            </li>
-         
-            <li>
-                <a href="https://kubernetes.io/#">
+					<ul>
+
+						<li><a href="https://kubernetes.io/cn/">Chinese</a></li>
+
+					</ul>
+				</li>
+
+				<li>
+					<a href="https://kubernetes.io/#">
                     v1.11 <span class="ui-icon ui-icon-carat-1-s"></span>
                 </a>
-                <ul>
-                
-                    <li><a href="https://kubernetes.io/">v1.11</a></li>
-                
-                    <li><a href="https://v1-10.docs.kubernetes.io/">v1.10</a></li>
-                
-                    <li><a href="https://v1-9.docs.kubernetes.io/">v1.9</a></li>
-                
-                    <li><a href="https://v1-8.docs.kubernetes.io/">v1.8</a></li>
-                
-                    <li><a href="https://v1-7.docs.kubernetes.io/">v1.7</a></li>
-                
-                </ul>
-            </li>
-        </ul>
-        
-        <a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/" class="button" id="tryKubernetes" data-auto-burger-exclude="">Try Kubernetes</a>
-        <button id="hamburger" onclick="kub.toggleMenu()" data-auto-burger-exclude=""><div></div></button>
-    </div>
+					<ul>
 
-    <nav id="mainNav">
-        <main data-auto-burger="primary">
-        <div class="nav-box">
-            <h3><a href="https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/">Get Started</a></h3>
-            <p>Ready to get your hands dirty? Build a simple Kubernetes cluster that runs "Hello World" for Node.js.</p>
-        </div>
-        <div class="nav-box">
-            <h3><a href="https://kubernetes.io/docs/home/">Documentation</a></h3>
-            <p>Learn how to use Kubernetes with the use of walkthroughs, samples, and reference documentation. You can even <a href="https://kubernetes.io/editdocs/" data-auto-burger-exclude="">help contribute to the docs</a>!</p>
-        </div>
-        <div class="nav-box">
-            <h3><a href="https://kubernetes.io/community/">Community</a></h3>
-            <p>If you need help, you can connect with other Kubernetes users and the Kubernetes authors, attend community events, and watch video presentations from around the web.</p>
-        </div>
-        <div class="nav-box">
-            <h3><a href="https://kubernetes.io/blog/">Blog</a></h3>
-            <p>Read the latest news for Kubernetes and the containers space in general, and get technical how-tos hot off the presses.</p>
-        </div>
-        </main>
-        <main data-auto-burger="primary">
-        <div class="left">
-            <h5 class="github-invite">Interested in hacking on the core Kubernetes code base?</h5>
-            <a href="https://github.com/kubernetes/kubernetes" class="button" data-auto-burger-exclude="">View On Github</a>
-        </div>
+						<li><a href="https://kubernetes.io/">v1.11</a></li>
 
-        <div class="right">
-            <h5 class="github-invite">Explore the community</h5>
-            <div class="social">
-                <a href="https://twitter.com/kubernetesio" class="twitter"><span>Twitter</span></a>
-                <a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
-                <a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
-                <a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
-                <a href="https://discuss.kubernetes.io/" class="mailing-list"><span>Forum</span></a>
-                <a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
-            </div>
-        </div>
-        <div class="clear" style="clear: both"></div>
-        </main>
-    </nav>
-</header>
+						<li><a href="https://v1-10.docs.kubernetes.io/">v1.10</a></li>
 
-		
-		
-		<section id="hero" class="light-text bot-bar">
-			<main>
-				<div id="headlineWrapper">
-					<h1>Production-Grade Container Orchestration</h1>
-					<h5>Automated container deployment, scaling, and management</h5>
+						<li><a href="https://v1-9.docs.kubernetes.io/">v1.9</a></li>
+
+						<li><a href="https://v1-8.docs.kubernetes.io/">v1.8</a></li>
+
+						<li><a href="https://v1-7.docs.kubernetes.io/">v1.7</a></li>
+
+					</ul>
+				</li>
+			</ul>
+
+			<a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/" class="button" id="tryKubernetes" data-auto-burger-exclude="">Try Kubernetes</a>
+			<button id="hamburger" onclick="kub.toggleMenu()" data-auto-burger-exclude=""><div></div></button>
+		</div>
+
+		<nav id="mainNav">
+			<main data-auto-burger="primary">
+				<div class="nav-box">
+					<h3><a href="https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/">Get Started</a></h3>
+					<p>Ready to get your hands dirty? Build a simple Kubernetes cluster that runs "Hello World" for Node.js.</p>
 				</div>
-				
-
-
+				<div class="nav-box">
+					<h3><a href="https://kubernetes.io/docs/home/">Documentation</a></h3>
+					<p>Learn how to use Kubernetes with the use of walkthroughs, samples, and reference documentation. You can even <a href="https://kubernetes.io/editdocs/" data-auto-burger-exclude="">help contribute to the docs</a>!</p>
+				</div>
+				<div class="nav-box">
+					<h3><a href="https://kubernetes.io/community/">Community</a></h3>
+					<p>If you need help, you can connect with other Kubernetes users and the Kubernetes authors, attend community events, and watch video presentations from around the web.</p>
+				</div>
+				<div class="nav-box">
+					<h3><a href="https://kubernetes.io/blog/">Blog</a></h3>
+					<p>Read the latest news for Kubernetes and the containers space in general, and get technical how-tos hot off the presses.</p>
+				</div>
 			</main>
-		</section>
-		
-		
-		
+			<main data-auto-burger="primary">
+				<div class="left">
+					<h5 class="github-invite">Interested in hacking on the core Kubernetes code base?</h5>
+					<a href="https://github.com/kubernetes/kubernetes" class="button" data-auto-burger-exclude="">View On Github</a>
+				</div>
+
+				<div class="right">
+					<h5 class="github-invite">Explore the community</h5>
+					<div class="social">
+						<a href="https://twitter.com/kubernetesio" class="twitter"><span>Twitter</span></a>
+						<a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
+						<a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
+						<a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
+						<a href="https://discuss.kubernetes.io/" class="mailing-list"><span>Forum</span></a>
+						<a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
+					</div>
+				</div>
+				<div class="clear" style="clear: both"></div>
+			</main>
+		</nav>
+	</header>
 
 
 
-<!--  OCEAN NODES  -->
-<section id="oceanNodes">
-    <main>
-        <div class="image-wrapper"><img src="./kubernetes-io_files/flower.png"></div>
-        <div class="content">
-            <h3><a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">Kubernetes</a> is an open-source system for automating deployment, scaling, and management of containerized applications.</h3>
-            <p>It groups containers that make up an application into logical units for easy management and discovery. Kubernetes builds
-            upon <a href="http://queue.acm.org/detail.cfm?id=2898444">15 years of experience of running production workloads at Google</a>,
-            combined with best-of-breed ideas and practices from the community.</p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper"><img src="./kubernetes-io_files/scalable.png"></div>
-        <div class="content">
-            <h4>Planet Scale</h4>
-            <p>Designed on the same principles that allows Google to run billions of containers a week, Kubernetes can scale without increasing your ops team.</p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper"><img src="./kubernetes-io_files/blocks.png"></div>
-        <div class="content">
-            <h4>Never Outgrow</h4>
-            <p>Whether testing locally or running a global enterprise, Kubernetes flexibility grows with you to deliver your applications consistently and easily no matter how complex your need is.</p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper"><img src="./kubernetes-io_files/suitcase.png"></div>
-        <div class="content">
-            <h4>Run Anywhere</h4>
-            <p>Kubernetes is open source giving you the freedom to take advantage of on-premises, hybrid, or public cloud infrastructure, letting you effortlessly move workloads to where it matters to you.</p>
-        </div>
-    </main>
-</section>
+	<section id="hero" class="light-text bot-bar">
+		<main>
+			<div id="headlineWrapper">
+				<h1>Production-Grade Container Orchestration</h1>
+				<h5>Automated container deployment, scaling, and management</h5>
+			</div>
 
-<section id="video">
-    <div class="light-text">
-        <h2>The Challenges of Migrating 150+ Microservices to Kubernetes</h2>
-        <p>By Sarah Wells, Technical Director for Operations and Reliability, Financial Times</p>
-        <button id="desktopShowVideoButton" onclick="kub.showVideo()">Watch Video</button>
-        <br>
-        <br>
-        <br>
-        <a href="https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2018/" button="" id="desktopKCButton">Attend KubeCon in Shanghai on Nov. 13-15, 2018</a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <a href="https://events.linuxfoundation.org/events/kubecon-cloudnativecon-north-america-2018/" button="" id="desktopKCButton">Attend KubeCon in Seattle on Dec. 11-13, 2018</a>
-  </div>
-  <button id="mobileShowVideoButton" onclick="kub.showVideo()"></button>
-</section>
 
-<section id="features">
-    <main>
-        <h3 class="center">Kubernetes Features</h3>
 
-        <div class="feature-box">
-            <div>
-                <h4><a href="https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/">Automatic binpacking</a></h4>
-                <p>Automatically places containers based on their resource requirements and other constraints, while not
-                    sacrificing availability. Mix critical and best-effort workloads in order to drive up utilization and save even more resources.</p>
-            </div>
-            <div>
-                <h4><a href="https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller">Self-healing</a></h4>
-                <p>Restarts containers that fail, replaces and reschedules containers when nodes die, kills containers
-                    that don't respond to your user-defined health check, and doesn't advertise them to clients until they are ready to serve.</p>
-            </div>
-        </div>
-
-        <div class="feature-box">
-            <div>
-                <h4><a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">Horizontal scaling</a></h4>
-                <p>Scale your application up and down with a simple command, with a UI, or automatically based on CPU usage.</p>
-            </div>
-            <div>
-                <h4><a href="https://kubernetes.io/docs/concepts/services-networking/service/">Service discovery and load balancing</a></h4>
-                <p>No need to modify your application to use an unfamiliar service discovery mechanism. Kubernetes gives
-                    containers their own IP addresses and a single DNS name for a set of containers, and can load-balance across them.</p>
-            </div>
-        </div>
-
-        <div class="feature-box">
-            <div>
-                <h4><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#what-is-a-deployment">Automated rollouts and rollbacks</a></h4>
-                <p>Kubernetes progressively rolls out changes to your application or its configuration, while monitoring
-                    application health to ensure it doesn't kill all your instances at the same time. If something goes
-                    wrong, Kubernetes will rollback the change for you. Take advantage of a growing ecosystem of deployment solutions.</p>
-            </div>
-            <div>
-                <h4><a href="https://kubernetes.io/docs/concepts/configuration/secret/">Secret</a> and <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/">configuration</a> management</h4>
-                <p>Deploy and update secrets and application configuration without rebuilding your image and without
-                    exposing secrets in your stack configuration.</p>
-            </div>
-        </div>
-
-        <div class="feature-box">
-            <div>
-                <h4><a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">Storage orchestration</a></h4>
-                <p>Automatically mount the storage system of your choice, whether from local storage, a public cloud provider
-                such as <a href="https://cloud.google.com/storage/">GCP</a> or <a href="https://aws.amazon.com/products/storage/">AWS</a>, or a network storage system such as NFS, iSCSI,
-                Gluster, Ceph, Cinder, or Flocker.</p>
-            </div>
-            <div>
-                <h4><a href="https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/">Batch execution</a></h4>
-                <p>In addition to services, Kubernetes can manage your batch and CI workloads, replacing containers that fail, if desired.</p>
-            </div>
-        </div>
-
-    </main>
-</section>
-
-<section id="talkToUs">
-    <main>
-        <h3>Case Studies</h3>
-        <div id="caseStudiesWrapper">
-          <div>
-              <p>Sling TV: Marrying Kubernetes and AI to Enable Proper Web Scale</p>
-              <a href="https://kubernetes.io/case-studies/slingtv">Read more</a>
-          </div>
-          <div>
-              <p>Using OpenTracing to Help Pinpoint the Bottlenecks</p>
-              <a href="https://kubernetes.io/case-studies/workiva">Read more</a>
-          </div>
-          <div>
-              <p>Pinning Its Past, Present, and Future on Cloud Native</p>
-              <a href="https://kubernetes.io/case-studies/pinterest">Read more</a>
-          </div>
-          <div>
-              <p>Reinventing the World’s Largest Education Company With Kubernetes</p>
-              <a href="https://kubernetes.io/case-studies/pearson">Read more</a>
-          </div>
-
-        </div>
-
-        <!--<div id="bigSocial">-->
-            <!--&lt;!&ndash;<div>&ndash;&gt;-->
-                <!--&lt;!&ndash;<a href="https://youtu.be/OLwzSHBtxhI">Watch the video</a>&ndash;&gt;-->
-                <!--&lt;!&ndash;<p>Creating Next Generation Kubernetes Infrastructure at Viacom</p>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--<div>-->
-                <!--<p>Using Kubernetes to reinvent the world's largest educational company</p>-->
-                <!--<a href="/case-studies/pearson/">Read more</a>-->
-            <!--</div>-->
-            <!--<div>-->
-                <!--<p>Kubernetes at Box: Microservices at Maximum Velocity</p>-->
-                <!--<a href="https://blog.box.com/blog/kubernetes-box-microservices-maximum-velocity/">Read more</a>-->
-            <!--</div>-->
-            <!--<div>-->
-                <!--<p>Inside eBay's shift to Kubernetes and containers atop OpenStack</p>-->
-                <!--<a href="http://www.nextplatform.com/2015/11/12/inside-ebays-shift-to-kubernetes-and-containers-atop-openstack/">Read the story</a>-->
-            <!--</div>-->
-            <!--<div>-->
-                <!--<p>Migrating from a homegrown 'cluster' to Kubernetes</p>-->
-                <!--<a href="https://www.youtube.com/watch?v=6XGUTu3WhBw">Watch the video</a>-->
-            <!--</div>-->
-        <!--</div>-->
-        <h5 style="text-align: center"><a href="https://kubernetes.io/case-studies/" style="color: #3371E3; font-weight: 400">View all case studies</a></h5>
-      </main>
-  </section>
-        <section id="cncf">
-            <main>
-        <center>
-        <p style="font-size: 20px">We are a <a href="https://cncf.io/">CNCF</a> graduated project</p>
-        </center>
-      </main>
-  </section>
+		</main>
+	</section>
 
 
 
 
 
-<div id="videoPlayer">
-    <iframe data-url="https://www.youtube.com/embed/H06qrNmGqyE?autoplay=1" frameborder="0" allowfullscreen="" src="./kubernetes-io_files/saved_resource.html"></iframe>
-    <button id="closeButton"></button>
-</div>
+
+	<!--  OCEAN NODES  -->
+	<section id="oceanNodes">
+		<main>
+			<div class="image-wrapper"><img src="./kubernetes-io_files/flower.png"></div>
+			<div class="content">
+				<h3><a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">Kubernetes</a> is an open-source system for automating deployment, scaling, and management of containerized applications.</h3>
+				<p>It groups containers that make up an application into logical units for easy management and discovery. Kubernetes builds upon <a href="http://queue.acm.org/detail.cfm?id=2898444">15 years of experience of running production workloads at Google</a>,
+					combined with best-of-breed ideas and practices from the community.</p>
+			</div>
+		</main>
+		<main>
+			<div class="image-wrapper"><img src="./kubernetes-io_files/scalable.png"></div>
+			<div class="content">
+				<h4>Planet Scale</h4>
+				<p>Designed on the same principles that allows Google to run billions of containers a week, Kubernetes can scale without increasing your ops team.</p>
+			</div>
+		</main>
+		<main>
+			<div class="image-wrapper"><img src="./kubernetes-io_files/blocks.png"></div>
+			<div class="content">
+				<h4>Never Outgrow</h4>
+				<p>Whether testing locally or running a global enterprise, Kubernetes flexibility grows with you to deliver your applications consistently and easily no matter how complex your need is.</p>
+			</div>
+		</main>
+		<main>
+			<div class="image-wrapper"><img src="./kubernetes-io_files/suitcase.png"></div>
+			<div class="content">
+				<h4>Run Anywhere</h4>
+				<p>Kubernetes is open source giving you the freedom to take advantage of on-premises, hybrid, or public cloud infrastructure, letting you effortlessly move workloads to where it matters to you.</p>
+			</div>
+		</main>
+	</section>
+
+	<section id="video">
+		<div class="light-text">
+			<h2>The Challenges of Migrating 150+ Microservices to Kubernetes</h2>
+			<p>By Sarah Wells, Technical Director for Operations and Reliability, Financial Times</p>
+			<button id="desktopShowVideoButton" onclick="kub.showVideo()">Watch Video</button>
+			<br>
+			<br>
+			<br>
+			<a href="https://www.lfasiallc.com/events/kubecon-cloudnativecon-china-2018/" button="" id="desktopKCButton">Attend KubeCon in Shanghai on Nov. 13-15, 2018</a>
+			<br>
+			<br>
+			<br>
+			<br>
+			<a href="https://events.linuxfoundation.org/events/kubecon-cloudnativecon-north-america-2018/" button="" id="desktopKCButton">Attend KubeCon in Seattle on Dec. 11-13, 2018</a>
+		</div>
+		<button id="mobileShowVideoButton" onclick="kub.showVideo()"></button>
+	</section>
+
+	<section id="features">
+		<main>
+			<h3 class="center">Kubernetes Features</h3>
+
+			<div class="feature-box">
+				<div>
+					<h4><a href="https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/">Automatic binpacking</a></h4>
+					<p>Automatically places containers based on their resource requirements and other constraints, while not sacrificing availability. Mix critical and best-effort workloads in order to drive up utilization and save even more resources.</p>
+				</div>
+				<div>
+					<h4><a href="https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller">Self-healing</a></h4>
+					<p>Restarts containers that fail, replaces and reschedules containers when nodes die, kills containers that don't respond to your user-defined health check, and doesn't advertise them to clients until they are ready to serve.</p>
+				</div>
+			</div>
+
+			<div class="feature-box">
+				<div>
+					<h4><a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">Horizontal scaling</a></h4>
+					<p>Scale your application up and down with a simple command, with a UI, or automatically based on CPU usage.</p>
+				</div>
+				<div>
+					<h4><a href="https://kubernetes.io/docs/concepts/services-networking/service/">Service discovery and load balancing</a></h4>
+					<p>No need to modify your application to use an unfamiliar service discovery mechanism. Kubernetes gives containers their own IP addresses and a single DNS name for a set of containers, and can load-balance across them.</p>
+				</div>
+			</div>
+
+			<div class="feature-box">
+				<div>
+					<h4><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#what-is-a-deployment">Automated rollouts and rollbacks</a></h4>
+					<p>Kubernetes progressively rolls out changes to your application or its configuration, while monitoring application health to ensure it doesn't kill all your instances at the same time. If something goes wrong, Kubernetes will rollback the change for
+						you. Take advantage of a growing ecosystem of deployment solutions.</p>
+				</div>
+				<div>
+					<h4><a href="https://kubernetes.io/docs/concepts/configuration/secret/">Secret</a> and <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/">configuration</a> management</h4>
+					<p>Deploy and update secrets and application configuration without rebuilding your image and without exposing secrets in your stack configuration.</p>
+				</div>
+			</div>
+
+			<div class="feature-box">
+				<div>
+					<h4><a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">Storage orchestration</a></h4>
+					<p>Automatically mount the storage system of your choice, whether from local storage, a public cloud provider such as <a href="https://cloud.google.com/storage/">GCP</a> or <a href="https://aws.amazon.com/products/storage/">AWS</a>, or a network storage
+						system such as NFS, iSCSI, Gluster, Ceph, Cinder, or Flocker.</p>
+				</div>
+				<div>
+					<h4><a href="https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/">Batch execution</a></h4>
+					<p>In addition to services, Kubernetes can manage your batch and CI workloads, replacing containers that fail, if desired.</p>
+				</div>
+			</div>
+
+		</main>
+	</section>
+
+	<section id="talkToUs">
+		<main>
+			<h3>Case Studies</h3>
+			<div id="caseStudiesWrapper">
+				<div>
+					<p>Sling TV: Marrying Kubernetes and AI to Enable Proper Web Scale</p>
+					<a href="https://kubernetes.io/case-studies/slingtv">Read more</a>
+				</div>
+				<div>
+					<p>Using OpenTracing to Help Pinpoint the Bottlenecks</p>
+					<a href="https://kubernetes.io/case-studies/workiva">Read more</a>
+				</div>
+				<div>
+					<p>Pinning Its Past, Present, and Future on Cloud Native</p>
+					<a href="https://kubernetes.io/case-studies/pinterest">Read more</a>
+				</div>
+				<div>
+					<p>Reinventing the World’s Largest Education Company With Kubernetes</p>
+					<a href="https://kubernetes.io/case-studies/pearson">Read more</a>
+				</div>
+
+			</div>
+
+			<!--<div id="bigSocial">-->
+			<!--&lt;!&ndash;<div>&ndash;&gt;-->
+			<!--&lt;!&ndash;<a href="https://youtu.be/OLwzSHBtxhI">Watch the video</a>&ndash;&gt;-->
+			<!--&lt;!&ndash;<p>Creating Next Generation Kubernetes Infrastructure at Viacom</p>&ndash;&gt;-->
+			<!--&lt;!&ndash;</div>&ndash;&gt;-->
+			<!--<div>-->
+			<!--<p>Using Kubernetes to reinvent the world's largest educational company</p>-->
+			<!--<a href="/case-studies/pearson/">Read more</a>-->
+			<!--</div>-->
+			<!--<div>-->
+			<!--<p>Kubernetes at Box: Microservices at Maximum Velocity</p>-->
+			<!--<a href="https://blog.box.com/blog/kubernetes-box-microservices-maximum-velocity/">Read more</a>-->
+			<!--</div>-->
+			<!--<div>-->
+			<!--<p>Inside eBay's shift to Kubernetes and containers atop OpenStack</p>-->
+			<!--<a href="http://www.nextplatform.com/2015/11/12/inside-ebays-shift-to-kubernetes-and-containers-atop-openstack/">Read the story</a>-->
+			<!--</div>-->
+			<!--<div>-->
+			<!--<p>Migrating from a homegrown 'cluster' to Kubernetes</p>-->
+			<!--<a href="https://www.youtube.com/watch?v=6XGUTu3WhBw">Watch the video</a>-->
+			<!--</div>-->
+			<!--</div>-->
+			<h5 style="text-align: center"><a href="https://kubernetes.io/case-studies/" style="color: #3371E3; font-weight: 400">View all case studies</a></h5>
+		</main>
+	</section>
+	<section id="cncf">
+		<main>
+			<center>
+				<p style="font-size: 20px">We are a <a href="https://cncf.io/">CNCF</a> graduated project</p>
+			</center>
+		</main>
+	</section>
 
 
-		<footer>
-    <main class="light-text">
-        <nav>
-            
-            
-            
-            <a href="https://kubernetes.io/docs/home/">Documentation</a>
-            
-            <a href="https://kubernetes.io/blog/">Blog</a>
-            
-            <a href="https://kubernetes.io/partners/">Partners</a>
-            
-            <a href="https://kubernetes.io/community/">Community</a>
-            
-            <a href="https://kubernetes.io/case-studies/">Case Studies</a>
-            
-        </nav>
-        <div class="social">
-            <div>
-                <a href="https://twitter.com/kubernetesio" class="twitter"><span>twitter</span></a>
-                <a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
-                <a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
-            </div>
-            <div>
-                <a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
-                <a href="https://discuss.kubernetes.io/" class="mailing-list"><span>Forum</span></a>
-                <a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
-            </div>
-            <div>
-                <a href="https://kubernetes.io/docs/setup/pick-right-solution/" class="button">Get Kubernetes</a>
-                <a href="https://git.k8s.io/community/contributors/guide" class="button">Contribute</a>
-            </div>
-        </div>
-        <div id="miceType" class="center">
-            © 2018 The Kubernetes Authors | Documentation Distributed under <a href="https://git.k8s.io/website/LICENSE" class="light-text">CC BY 4.0</a>
-        </div>
-        <div id="miceType" class="center">
-            Copyright © 2018 The Linux Foundation®. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage" class="light-text">Trademark Usage page</a>
-        </div>
-        <div id="miceType" class="center">
-            ICP license: 京ICP备17074266号-3
-        </div>
-    </main>
-</footer>
-
-		<button class="flyout-button" onclick="kub.toggleToc()"></button>
-
-<script>
-
-(function () {
-    window.addEventListener('DOMContentLoaded', init)
-
-        
-        function init() {
-            window.removeEventListener('DOMContentLoaded', init)
-                hideNav()
-        }
-
-    function hideNav(toc){
-        if (!toc) toc = document.querySelector('#docsToc')
-        if (!toc) return
-            var container = toc.querySelector('.container')
-
-                
-                if (container) {
-                    if (container.childElementCount === 0 || toc.querySelectorAll('a.item').length === 1) {
-                        toc.style.display = 'none'
-                            document.getElementById('docsContent').style.width = '100%'
-                    }
-                } else {
-                    requestAnimationFrame(function () {
-                        hideNav(toc)
-                    })
-                }
-    }
-})();
-</script>
 
 
 
-	
-<div class="pi-pushmenu" id="primary" style="display: none;"><div class="overlay"><div class="sled" style="right: 0px;"><div class="content"><ul><li><a href="https://kubernetes.io/docs/home/" id="">Documentation</a></li><li><a href="https://kubernetes.io/blog/" id="">Blog</a></li><li><a href="https://kubernetes.io/partners/" id="">Partners</a></li><li><a href="https://kubernetes.io/community/" id="">Community</a></li><li><a href="https://kubernetes.io/case-studies/" id="">Case Studies</a></li><li><a href="https://kubernetes.io/#" id="">
+	<div id="videoPlayer">
+		<iframe data-url="https://www.youtube.com/embed/H06qrNmGqyE?autoplay=1" frameborder="0" allowfullscreen="" src="./kubernetes-io_files/saved_resource.html"></iframe>
+		<button id="closeButton"></button>
+	</div>
+
+
+	<footer>
+		<main class="light-text">
+			<nav>
+
+				<a href="https://kubernetes.io/docs/home/">Documentation</a>
+
+				<a href="https://kubernetes.io/blog/">Blog</a>
+
+				<a href="https://kubernetes.io/partners/">Partners</a>
+
+				<a href="https://kubernetes.io/community/">Community</a>
+
+				<a href="https://kubernetes.io/case-studies/">Case Studies</a>
+
+			</nav>
+			<div class="social">
+				<div>
+					<a href="https://twitter.com/kubernetesio" class="twitter"><span>twitter</span></a>
+					<a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
+					<a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
+				</div>
+				<div>
+					<a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
+					<a href="https://discuss.kubernetes.io/" class="mailing-list"><span>Forum</span></a>
+					<a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
+				</div>
+				<div>
+					<a href="https://kubernetes.io/docs/setup/pick-right-solution/" class="button">Get Kubernetes</a>
+					<a href="https://git.k8s.io/community/contributors/guide" class="button">Contribute</a>
+				</div>
+			</div>
+			<div id="miceType" class="center">
+				© 2018 The Kubernetes Authors | Documentation Distributed under <a href="https://git.k8s.io/website/LICENSE" class="light-text">CC BY 4.0</a>
+			</div>
+			<div id="miceType" class="center">
+				Copyright © 2018 The Linux Foundation®. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage"
+				  class="light-text">Trademark Usage page</a>
+			</div>
+			<div id="miceType" class="center">
+				ICP license: 京ICP备17074266号-3
+			</div>
+		</main>
+	</footer>
+
+	<button class="flyout-button" onclick="kub.toggleToc()"></button>
+
+	<script>
+		(function() {
+			window.addEventListener('DOMContentLoaded', init)
+
+
+			function init() {
+				window.removeEventListener('DOMContentLoaded', init)
+				hideNav()
+			}
+
+			function hideNav(toc) {
+				if (!toc) toc = document.querySelector('#docsToc')
+				if (!toc) return
+				var container = toc.querySelector('.container')
+
+
+				if (container) {
+					if (container.childElementCount === 0 || toc.querySelectorAll('a.item').length === 1) {
+						toc.style.display = 'none'
+						document.getElementById('docsContent').style.width = '100%'
+					}
+				} else {
+					requestAnimationFrame(function() {
+						hideNav(toc)
+					})
+				}
+			}
+		})();
+	</script>
+
+	<!-- EMBED REACT APP PART -->
+	<div class="bottom-left">
+		<embed src="http://localhost:3000" style="width:65px; height: 65px;">
+	</div>
+
+	<div class="pi-pushmenu" id="primary" style="display: none;">
+		<div class="overlay">
+			<div class="sled" style="right: 0px;">
+				<div class="content">
+					<ul>
+						<li><a href="https://kubernetes.io/docs/home/" id="">Documentation</a></li>
+						<li><a href="https://kubernetes.io/blog/" id="">Blog</a></li>
+						<li><a href="https://kubernetes.io/partners/" id="">Partners</a></li>
+						<li><a href="https://kubernetes.io/community/" id="">Community</a></li>
+						<li><a href="https://kubernetes.io/case-studies/" id="">Case Studies</a></li>
+						<li><a href="https://kubernetes.io/#" id="">
                     English <span class="ui-icon ui-icon-carat-1-s"></span>
-                </a></li><li><a href="https://kubernetes.io/cn/" id="">Chinese</a></li><li><a href="https://kubernetes.io/#" id="">
+                </a></li>
+						<li><a href="https://kubernetes.io/cn/" id="">Chinese</a></li>
+						<li><a href="https://kubernetes.io/#" id="">
                     v1.11 <span class="ui-icon ui-icon-carat-1-s"></span>
-                </a></li><li><a href="https://kubernetes.io/" id="">v1.11</a></li><li><a href="https://v1-10.docs.kubernetes.io/" id="">v1.10</a></li><li><a href="https://v1-9.docs.kubernetes.io/" id="">v1.9</a></li><li><a href="https://v1-8.docs.kubernetes.io/" id="">v1.8</a></li><li><a href="https://v1-7.docs.kubernetes.io/" id="">v1.7</a></li><li><a href="https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/" id="">Get Started</a></li><li><a href="https://kubernetes.io/docs/home/" id="">Documentation</a></li><li><a href="https://kubernetes.io/community/" id="">Community</a></li><li><a href="https://kubernetes.io/blog/" id="">Blog</a></li><li><a href="https://twitter.com/kubernetesio" class="twitter" id=""><span>Twitter</span></a></li><li><a href="https://github.com/kubernetes/kubernetes" class="github" id=""><span>Github</span></a></li><li><a href="http://slack.k8s.io/" class="slack" id=""><span>Slack</span></a></li><li><a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow" id=""><span>Stack Overflow</span></a></li><li><a href="https://discuss.kubernetes.io/" class="mailing-list" id=""><span>Forum</span></a></li><li><a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar" id=""><span>Events Calendar</span></a></li></ul></div><button class="push-menu-close-button"></button></div></div></div><div id="contain-402"></div><script src="./kubernetes-io_files/f(3).txt" nonce=""></script></body></html>
+                </a></li>
+						<li><a href="https://kubernetes.io/" id="">v1.11</a></li>
+						<li><a href="https://v1-10.docs.kubernetes.io/" id="">v1.10</a></li>
+						<li><a href="https://v1-9.docs.kubernetes.io/" id="">v1.9</a></li>
+						<li><a href="https://v1-8.docs.kubernetes.io/" id="">v1.8</a></li>
+						<li><a href="https://v1-7.docs.kubernetes.io/" id="">v1.7</a></li>
+						<li><a href="https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/" id="">Get Started</a></li>
+						<li><a href="https://kubernetes.io/docs/home/" id="">Documentation</a></li>
+						<li><a href="https://kubernetes.io/community/" id="">Community</a></li>
+						<li><a href="https://kubernetes.io/blog/" id="">Blog</a></li>
+						<li><a href="https://twitter.com/kubernetesio" class="twitter" id=""><span>Twitter</span></a></li>
+						<li><a href="https://github.com/kubernetes/kubernetes" class="github" id=""><span>Github</span></a></li>
+						<li><a href="http://slack.k8s.io/" class="slack" id=""><span>Slack</span></a></li>
+						<li><a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow" id=""><span>Stack Overflow</span></a></li>
+						<li><a href="https://discuss.kubernetes.io/" class="mailing-list" id=""><span>Forum</span></a></li>
+						<li><a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar" id=""><span>Events Calendar</span></a></li>
+					</ul>
+				</div><button class="push-menu-close-button"></button></div>
+		</div>
+	</div>
+	<div id="contain-402"></div>
+	<script src="./kubernetes-io_files/f(3).txt" nonce=""></script>
+</body>
+
+</html>

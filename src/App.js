@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import Iframe from 'react-iframe';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import BlueCircle from './components/BlueCircle';
 
 
@@ -10,12 +9,9 @@ class App extends Component {
     super(props);
     this.state = {
       direction: '',
-      lastScrollPos: 0,
-      whitelist: ["id", "tagName", "className", "childNodes"]
+      lastScrollPos: 0
     };
     this.handleScroll = this.handleScroll.bind(this);
-    this.iframe = this.iframe.bind(this);
-    this.getDOMElements = this.getDOMElements.bind(this);
   }
 
   handleScroll(event) {
@@ -33,31 +29,8 @@ class App extends Component {
     }
   }
 
-  getDOMElements() {
-    const { whitelist } = this.state
-    const element = ReactDOM.findDOMNode(this);
-    console.log(element);
-
-  }
-
-  iframe() {
-    const url = 'https://kubernetes.io';
-    return {
-      __html: `<iframe src=${url} frameborder="0" \
-                width="100%" height="900px" allowFullScreen></iframe>`
-    }
-  }
-
   render() {
-    return (
-      <div>
-        {/*<Iframe url='https://kubernetes.io' />*/}
-        <div dangerouslySetInnerHTML={ this.iframe() } onScroll={this.handleScroll()}/>
-        <div className='bottom-left'>
-          <BlueCircle/>
-        </div>
-      </div>
-    );
+    return ( <BlueCircle/> );
   }
 
 }
