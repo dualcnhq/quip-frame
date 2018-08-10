@@ -31,3 +31,8 @@
     `serve static`
 
 - open page in browser `http://localhost:5000`
+
+
+## Dependencies / Similar project
+
+- [in-view](https://github.com/camwiegert/in-view)
