@@ -12,16 +12,32 @@ class App extends Component {
       lastScrollPos: 0
     };
     this.handleScroll = this.handleScroll.bind(this);
+
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
+
+  componentDidMount() {
+    console.log('component did mount')
+    window.addEventListener('scroll', this.handleScroll);
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    console.log('component will unmount')
+    window.removeEventListener('scroll', this.handleScroll);
+
+    document.removeEventListener('mousedown', this.handleClickOutside);
   }
 
   handleScroll(event) {
+    console.log('handleScroll')
     if(this._timeout) {
       clearTimeout(this._timeout);
     }
     this._timeout = setTimeout(() => {
       this._timeout = null;
       console.log('scroll stopped')
-      this.getDOMElements()
     }, 5000);
 
     if(this.state.scrollStatus !== 'scrolling') {
@@ -29,8 +45,23 @@ class App extends Component {
     }
   }
 
+  setWrapperRef(node) {
+    this.wrapperRef = node;
+  }
+
+  handleClickOutside(event) {
+    console.log('click outside')
+    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+      alert('You clicked outside of me!');
+    }
+  }
+
   render() {
-    return ( <BlueCircle/> );
+    return (
+      <div ref={this.setWrapperRef}>
+        <BlueCircle/>
+      </div>
+    );
   }
 
 }
