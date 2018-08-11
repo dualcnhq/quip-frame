@@ -1,25 +1,8 @@
-/* div {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-
-	margin: auto;
-} */
-
-.bottom-left {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
 .blue-circle {
-	top: 10;
-	bottom: 0;
-	left: 0;
-	right: 0;
-
+  position: fixed;
+	bottom: 6px;
+  left: 6px;
+  z-index: 2147483647;
   width: 60px;
   height: 60px;
   border-radius: 50%;
